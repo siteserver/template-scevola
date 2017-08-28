@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <stl:include file="/include/head.html"></stl:include>
+  <body>
+    <stl:include file="/include/header.html"></stl:include> 
+    <!--header-web-->
+    <div id="main">
+      <div id="container"> 
+        <stl:pageContents topLevel="0" isNoDup="true" scope="All" groupChannelNot="not" pageNum="10" order="AddDate">
+          <stl:if type="ItemIndex" operate="Equals" value="1">
+            <stl:yes>
+              <section class="list">
+                <div class=" mecc">
+                  <stl:a target="_blank" class="iu">
+                    <stl:content type="Hits"></stl:content> 
+                  </stl:a>
+                  <h2 class="mecctitle"> <stl:a target="_blank"> <stl:content type="Title" wordNum="25" ellipsis=""></stl:content> </stl:a> </h2>
+                  <address class="meccaddress">
+                    <time> <stl:content type="AddDate" formatString="MM.dd"></stl:content> </time>
+                    -
+                    <stl:a rel="category tag">{Channel.Title}</stl:a>  </address>
+                </div>
+                <span class="titleimg">
+                  
+                  <stl:a target="_blank">
+                    <img width="500" height="300" src="{Content.ImageUrl}" class="attachment-thumbnail size-thumbnail wp-post-image" sizes="(max-width: 500px) 100vw, 500px">      </stl:a>
+                  
+                </span>
+                <div class=" zaiyao">
+                  <p><stl:content type="Summary" wordNum="62" ellipsis=""></stl:content></p>
+                </div>
+                <div class="clear"></div>
+              </section>
+            </stl:yes>
+            <stl:no>
+              <stl:if type="ImageUrl" operate="NotEmpty">
+                <stl:yes>
+                  <section class="list">
+                    <div class=" mecc">
+                      <h2 class="mecctitle"> <stl:a target="_blank"> <stl:content type="Title" wordNum="25" ellipsis=""></stl:content> </stl:a> </h2>
+                      <address class="meccaddress">
+                        <time> <stl:content type="AddDate" formatString="MM.dd"></stl:content> </time>
+                        - <stl:tags context="Content"> <a href="{Stl.SiteUrl}/utils/tags.html?tagName={Tag.Name}">{Tag.Name}</a> </stl:tags>
+                      </address>
+                    </div>
+                    <span class="titleimg"> <stl:a target="_blank"> <img width="500" height="300" src="{Content.ImageUrl}" class="attachment-thumbnail size-thumbnail wp-post-image" /> </stl:a> </span>
+                    <div class=" zaiyao">
+                      <p><stl:content type="Summary" wordNum="62" ellipsis=""></stl:content></p>
+                    </div>
+                    <div class="clear"></div>
+                  </section>
+                </stl:yes>
+                <stl:no>
+                  <section class="list">
+                    <div class="mucc">
+                      <h2 class="mecctitle"> <stl:a target="_blank"> <stl:content type="Title" wordNum="25" ellipsis=""></stl:content> </stl:a> </h2>
+                      <address class="meccaddress">
+                        <time> <stl:content type="AddDate" formatString="MM.dd"></stl:content> </time>
+                        - <stl:tags context="Content"> <a href="{Stl.SiteUrl}/utils/tags.html?tagName={Tag.Name}">{Tag.Name}</a> </stl:tags>
+                      </address>
+                    </div>
+                    <div class="zuiyao">
+                      <p><stl:content type="Summary" wordNum="128" ellipsis=""></stl:content></p>
+                    </div>
+                    <div class="clear"></div>
+                  </section>
+                </stl:no>
+              </stl:if>
+            </stl:no>
+          </stl:if>
+        </stl:pageContents>
+        <div class="clear"></div>
+        <div class="posts-nav"> 
+          <stl:pageItems autoHide="true">
+            <stl:pageItem type="PageNavigation" listNum="5">
+              <stl:yes> <a class='page-numbers' href='{Current.Url}'>{Current.Num}</a> </stl:yes>
+              <stl:no> <span class='page-numbers current'>{Current.Num}</span> </stl:no>
+            </stl:pageItem> 
+          </stl:pageItems></div>
+      </div>
+      <!--Container--> 
+      <stl:include file="/include/aside.html"></stl:include>
+      <div class="clear"></div>
+    </div>
+    <!--main--> 
+    <stl:include file="/include/footer.html"></stl:include> 
+    <!--dibu--> 
+    <script type='text/javascript' src='{Stl.SiteUrl}/js/wp-embed.min.js'></script>
+  </body>
+</html>

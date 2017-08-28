@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <stl:include file="/include/head.html"></stl:include>
+  <body>
+    <stl:include file="/include/header.html"></stl:include> 
+    <!--header-web-->
+    <div id="main">
+      <div id="container">
+        <article class="content">
+          <header class="contenttitle">
+            <h1 class="mscctitle"> <a href="javascript:;"> <stl:content type="Title"></stl:content> </a> </h1>
+            <address class="msccaddress ">
+              <time> <stl:content type="AddDate" formatString="yyyy.MM.dd"></stl:content></time>
+              -
+              <stl:content type="Source"></stl:content>
+            </address>
+          </header>
+          <div class="content-text"> <stl:content type="Content"></stl:content> </div>
+          <!--content_text-->
+          <div class="zhuan">
+            <p>本文转载 " <stl:content type="Source"></stl:content> 整理 "<br><br>原文地址 " <stl:content type="SourceLink"></stl:content> "</p> 
+          </div>
+        </article>
+        <!--content--> 
+        
+        <!--相关文章-->
+        <div class="xianguan">
+          <div class="xianguantitle">相关文章！</div>
+          <ul class="pic">
+            <stl:contents isRelatedContents="true" totalNum="3">
+              <stl:if type="ImageUrl" operate="NotEmpty">
+                <stl:yes>
+                  <li><stl:a> <img width="500" height="300" src="{Content.ImageUrl}" class="attachment-thumbnail size-thumbnail wp-post-image" /> </stl:a><stl:a title="{Content.Title}"  class="link" target="_blank"> <stl:content type="Title" wordNum="28" ellipsis=""></stl:content> </stl:a>
+                    <address class="xianaddress">
+                      <time> <stl:content type="AddDate" formatString="yyyy.MM.dd"></stl:content> </time>
+                    </address>
+                    <p><stl:content type="Summary" wordNum="62" ellipsis=""></stl:content></p>
+                  </li>
+                </stl:yes>
+                <stl:no>
+                  <li><stl:a target="_blank"> <img src="{Stl.SiteUrl}/images/xxx.gif" /> </stl:a><stl:a rel="bookmark" title="{Content.Title}"  class="link" target="_blank"> <stl:content type="Title" wordNum="14" ellipsis=""></stl:content> </stl:a>
+                    <address class="xianaddress">
+                      <time> <stl:content type="AddDate" formatString="yyyy.MM.dd"></stl:content> </time>
+                    </address>
+                    <p><stl:content type="Summary" wordNum="62" ellipsis=""></stl:content></p>
+                  </li>
+                </stl:no>
+              </stl:if>
+            </stl:contents>
+          </ul>
+        </div>
+        <!--相关文章--> 
+      </div>
+      <!--Container End--> 
+      <stl:include file="/include/aside.html"></stl:include>
+      <div class="clear"></div>
+    </div>
+    <!--main--> 
+    <stl:include file="/include/footer.html"></stl:include> 
+    <!--dibu--> 
+    <script type='text/javascript' src='{Stl.SiteUrl}/js/wp-embed.min.js'></script>
+  </body>
+</html>

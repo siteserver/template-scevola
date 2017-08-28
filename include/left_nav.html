@@ -1,0 +1,16 @@
+<aside id="sitebar-page">
+  <div id="menu">
+        <ul class="menu">
+        <stl:channels topLevel="1">
+        <stl:if type="UpChannelOrSelf">
+            <stl:yes>
+            	<li class="navon"><stl:a>{Channel.Title}</stl:a></li>
+            </stl:yes>
+            <stl:no>
+            	<li><stl:a>{Channel.Title}</stl:a></li>
+            </stl:no>
+        </stl:if>
+        </stl:channels>
+		</ul>    	  
+        </div>
+</aside>

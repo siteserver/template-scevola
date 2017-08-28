@@ -1,0 +1,37 @@
+﻿@charset "utf-8";
+html {
+-webkit-text-size-adjust: none;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+ol, ul {
+	list-style: none;
+}
+img {
+	border: 0;
+	height: auto;
+	width: auto;
+}
+
+body {
+	font-family: "Microsoft Yahei", "冬青黑体简体中文 w3";
+	font-size: 16px;
+	background: #f5f5f5;
+	color: #656565;
+	letter-spacing: 0.5px;
+}
+a {
+	color: #656565;
+	font-size: 16px;
+	text-decoration: none;
+}
+a:hover {
+	color: #ff8b3d;
+}
+::selection{background:#ff8b3d;color:#fff;}
+
+.clear {
+	clear: both;
+}

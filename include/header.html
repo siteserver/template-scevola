@@ -1,0 +1,18 @@
+<header id="header-web">
+  <div class="header-main"> <a href="{Stl.SiteUrl}/index.html" class="logo">{stl:value type=Logo align="logo"}</a>
+    <nav class="header-nav ">
+      <div>
+        <ul>
+        <li><a href="{Stl.SiteUrl}/index.html">首页</a></li>
+        <stl:channels topLevel="0" groupChannel="nav">
+          <li><stl:a>{Channel.Title}</stl:a>
+          </li>
+        </stl:channels>
+        </ul>
+      </div>
+    </nav>
+    <form method="get" class="search" action="{Stl.SiteUrl}/utils/search.html" >
+      <input class="text" type="text" name="word" placeholder="搜索">
+    </form>
+  </div>
+</header>

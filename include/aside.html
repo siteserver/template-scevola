@@ -1,0 +1,19 @@
+<aside id="sitebar">
+    <div class="sitebar_list">
+      <h4 class="sitebar_title">网站标签</h4>
+      <div class="tagcloud">
+      <stl:tags context="Channel" totalNum="9">
+      <a href="{Stl.SiteUrl}/utils/tags.html?tagName={Tag.Name}" style="font-size: 15px;">{Tag.Name}</a> 
+      </stl:tags>
+      </div>
+    </div>
+    <div class="sitebar_list2">
+      <h4 class="sitebar_title2">随机热文</h4>
+      <ul class="sitebar_list_ul">
+      <stl:contents topLevel="0" scope="All" order="Hits" groupChannelNot="not" totalNum="4">
+        <li><stl:a target="_blank"> <stl:content type="Title" wordNum="30" ellipsis=""></stl:content></stl:a> </li>
+      </stl:contents>
+      </ul>
+    </div>
+
+  </aside>

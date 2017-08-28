@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <stl:include file="/include/head.html"></stl:include>
+  <body>
+    <stl:include file="/include/header.html"></stl:include> 
+    <!--header-web-->
+    <div id="main"> <stl:include file="/include/left_nav.html"></stl:include>
+      <div id="container">
+        <article class="content">
+          <header class="pagetitle">
+            <h1 class="mscctitle"> <a href="javascript:;">
+              {Channel.Title}
+              </a> </h1>
+          </header>
+          <div class="content-text"> <stl:content type="Content"></stl:content> </div>
+          <ul class="wp-tag-cloud" role="list">
+            <stl:tags context="Channel">
+              <li><a href="{Stl.SiteUrl}/utils/tags.html?tagName={Tag.Name}" class="tag-cloud-link tag-link-13 tag-link-position-1" style="font-size: 10pt;">{Tag.Name}</a></li>
+            </stl:tags>
+          </ul>
+        </article>
+        
+      </div>
+      <!--Container End--> 
+      
+    </div>
+    <!--main--> 
+    <stl:include file="/include/footer.html"></stl:include> 
+    <!--dibu--> 
+    <script type='text/javascript' src='{Stl.SiteUrl}/js/wp-embed.min.js'></script>
+  </body>
+</html>
